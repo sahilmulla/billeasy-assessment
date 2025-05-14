@@ -1,4 +1,5 @@
 const { Model } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
 	class User extends Model {}
 	User.init(
@@ -8,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
 				autoIncrement: true,
 				primaryKey: true,
 			},
-			username: {
+			email: {
 				type: DataTypes.STRING,
 				unique: true,
 				allowNull: false,
@@ -22,6 +23,7 @@ module.exports = (sequelize, DataTypes) => {
 			sequelize,
 			modelName: 'User',
 			tableName: 'users',
+			updatedAt: false,
 			timestamps: true,
 		}
 	);
