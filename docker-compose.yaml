@@ -10,6 +10,14 @@ services:
       - pgdata:/var/lib/postgresql/data
     ports:
       - 5432:5432
+  cache:
+    image: redis
+    restart: always
+    volumes:
+      - cache:/data
+    ports:
+      - 6379:6379
 
 volumes:
   pgdata:
+  cache:

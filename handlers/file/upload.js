@@ -1,4 +1,5 @@
 const { File } = require('../../models');
+const checksumQueue = require('../../jobs/compute_checksum');
 
 module.exports = async (req, res) => {
 	try {
@@ -18,6 +19,8 @@ module.exports = async (req, res) => {
 			title,
 			description,
 		});
+
+		await checksumQueue.addFile(file.id);
 
 		res.status(200).json({ id: file.id, status: file.status });
 	} catch (error) {
