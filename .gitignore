@@ -1,4 +1,5 @@
 node_modules/
+uploads/
 
 *.docx
 config/config.json
