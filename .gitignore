@@ -1,3 +1,5 @@
 node_modules/
 
 *.docx
+config/config.json
+.env
