@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const { User } = require('../../models');
 
 module.exports = async (req, res) => {
-	const { email, password } = req.body;
+	const { email, password } = req.body ?? {};
 
 	try {
 		if (!email || !password) {
