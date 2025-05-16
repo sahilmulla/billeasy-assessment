@@ -21,7 +21,6 @@ npm install
 
 ```
 docker compose up --detach
-
 ```
 
 ### 1.3 Run the service
@@ -30,7 +29,7 @@ docker compose up --detach
 npm run dev
 ```
 
-# 2 APIs
+# 2. APIs
 
 ### 2.1 Register
 
